@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+
+
+@font-face {
+    font-family: iran;
+    src: url(./fonts/IRANSansX-Medium.woff) format('woff');
+    src: url(./fonts/IRANSansX-Medium.woff2) format('woff2');
+}
+
+
+.container {
+
+    /* width: 100%; */
+    min-height: 100vh;
+    background: linear-gradient(135deg ,#153677,#4e085f );
+    padding: 10px;
+}
+
+.todo-box {
+
+    background-color: #fff;
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-box h2 {
+    
+    color: #002765;
+    margin-bottom: 20px;
+}
+
+.row{
+
+    background-color: #edeef0;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row input {
+
+    flex : 1 ;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px;
+
+}
+
+button {
+
+    padding: 13px 50px;
+    border-radius: 50px;
+    color: #fff;
+    background:#ff5945 ;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.list-container li {
+
+    list-style-type: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+
+.list-container li::before {
+
+    content: "";
+    position: absolute;
+    background-image: url(../img/unchecked.png);
+    height: 22px;
+    width: 22px;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+.list-container .checked {
+
+    text-decoration: line-through;
+    color: #555;
+}
+
+.list-container .checked::before {
+
+    background-image: url(../img/checked.png);
+}
+
+.list-container li span {
+
+    position: absolute;
+    right: 0;
+    top: 14px;
+    line-height: 22.5px;
+    font-size: 23px;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: #555;
+}
+
+.list-container li span:hover {
+
+    background-color: #edeef0;
+}
+
+
+
